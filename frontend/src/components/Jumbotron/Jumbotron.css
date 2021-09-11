@@ -1,0 +1,63 @@
+#particles-js {
+  width: 100%;
+  /* background: rgb(0, 162, 255); */
+  background: linear-gradient(90deg, rgb(0, 102, 255) 0%, rgb(0, 174, 255) 100%) 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: white;
+  text-align: left;
+  width: 45%;
+  left: 5%;
+  bottom: initial !important;
+  animation: fl1 3s infinite linear;
+}
+
+.caption h1 {
+  /* font-size: 3.5rem; */
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-shadow: 0.1rem 0.1rem 1rem black;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  word-break: inherit;
+}
+
+@media (max-width: 26.25em) {
+  h1 {
+    font-size: 1.875em;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.caption h3 {
+  /* font-size: 1.5rem; */
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding-bottom: 1.6rem;
+}
+
+.btn-lg {
+  border-width: medium;
+  border-radius: 0;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.1rem;
+}
+
+.mask-block {
+  /* background: linear-gradient(90deg, rgb(0, 174, 255) 0%, rgb(0, 174, 255) 100%) 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); */
+  background: rgb(4, 0, 255);
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  margin-top: -10%;
+  margin-bottom: 5%;
+  backface-visibility: hidden;
+  transform: skewY(-3deg);
+}

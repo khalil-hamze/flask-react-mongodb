@@ -8,16 +8,16 @@ application = Flask(__name__)
 CORS(application)
 
 # container
-# mongodb_username = os.environ['MONGODB_USERNAME']
-# mongodb_password = os.environ['MONGODB_PASSWORD']
-# mongodb_hostname = os.environ['MONGODB_HOSTNAME']
-# mongodb_database = os.environ['MONGODB_DATABASE']
+mongodb_username = os.environ['MONGODB_USERNAME']
+mongodb_password = os.environ['MONGODB_PASSWORD']
+mongodb_hostname = os.environ['MONGODB_HOSTNAME']
+mongodb_database = os.environ['MONGODB_DATABASE']
 
 # local
-mongodb_username = 'user'
-mongodb_password = 'password'
-mongodb_hostname = 'localhost'
-mongodb_database = 'testdb'
+# mongodb_username = 'user'
+# mongodb_password = 'password'
+# mongodb_hostname = 'localhost'
+# mongodb_database = 'testdb'
 
 application.config["MONGO_URI"] = 'mongodb://' + mongodb_username + ':' + mongodb_password + '@' + mongodb_hostname + ':27017/' + mongodb_database
 
@@ -72,10 +72,10 @@ def deleteProduct(id):
 
 if __name__ == "__main__":
     # container
-    # ENVIRONMENT_DEBUG = os.environ.get("APP_DEBUG", True)
-    # ENVIRONMENT_PORT = os.environ.get("APP_PORT", 5000)
+    ENVIRONMENT_DEBUG = os.environ.get("APP_DEBUG", True)
+    ENVIRONMENT_PORT = os.environ.get("APP_PORT", 5000)
 
     # local
-    ENVIRONMENT_DEBUG = True
-    ENVIRONMENT_PORT = 5000
+    # ENVIRONMENT_DEBUG = True
+    # ENVIRONMENT_PORT = 5000
     application.run(port=ENVIRONMENT_PORT, debug=ENVIRONMENT_DEBUG)

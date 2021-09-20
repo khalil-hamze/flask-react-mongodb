@@ -23,7 +23,7 @@ services:
     ports:
       - "5000:5000"
     container_name: flask
-    image: backend/flask-python:3.6
+    image: backend/flask-python:3.8
     restart: unless-stopped
     environment:
       APP_ENV: "prod"
